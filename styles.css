@@ -1,0 +1,94 @@
+:root {
+    --Primary-Colors-Primary: #3220ff;
+    --Text-Icon-Color: #C5CEFF;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(30, 30, 30);
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  header {
+    width: 100%;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    display: flex;
+    width: 425px;
+    height: 86px;
+    box-sizing: border-box;
+    justify-content: space-between; /* Ensure even spacing between items */
+    align-items: center;
+    border-radius: 50px;
+    color: var(--Text-Icon-Color);
+    box-shadow: 0px 2px 0px 0px #3B158B;
+    backdrop-filter: blur(10px);
+    position: relative;
+    background: 
+      radial-gradient(circle at center, rgba(50, 32, 255, 0.5) 20%, rgba(34, 40, 53, 0.4) 70%), 
+      linear-gradient(to right, rgba(151, 173, 223, 0.2) 0%, rgba(43, 53, 74, 0.2) 100%), 
+      linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(43, 68, 116, 0.2) 46%, rgba(95, 149, 255, 0.2) 100%), 
+      rgba(0, 0, 0, 0.69);
+    background-blend-mode: overlay, screen, normal, normal; /* Blend the gradients */
+    margin: 0 auto;
+    padding: 15px 30px;
+  }
+  
+  .icon-container {
+    position: relative; /* Ensure icons are above gradients */
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Ensure even spacing */
+  }
+  
+  .case-studies, .designs, .about-me {
+    margin: 0;
+    font-size: 16px;
+    color: var(--Text-Icon-Color);
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-weight: 400; /* Inter Regular */
+  }
+  
+  .nav-link.active {
+    font-weight: 600; /* Thicker font for active link */
+  }
+  
+  .nav-link .active-icon {
+    display: none;
+  }
+  
+  .nav-link.active .inactive-icon,
+  .nav-link:hover .inactive-icon {
+    display: none;
+  }
+  
+  .nav-link.active .active-icon,
+  .nav-link:hover .active-icon {
+    display: inline;
+  }
+  
+  .nav-link img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+  }
+  
